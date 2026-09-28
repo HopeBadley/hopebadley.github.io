@@ -279,11 +279,16 @@
 
                 <p>
                     I tested authentication failures, role restrictions, and reservation
-                    workflows with Postman and in the browser. The Angular application builds,
-                    and all 17 Angular tests pass. This enhancement taught me that hiding an
-                    administrator button is useful for the interface, but permission must also
-                    be enforced by the server.
+  workflows with Postman and in the browser. The Angular application builds,
+  and all 17 Angular tests pass.
                 </p>
+
+              <p>
+  The most useful design lesson was that the interface and API have different
+  responsibilities. Hiding an administrator button keeps the page appropriate
+  for customers, but someone can still send a request directly to the API.
+  That is why the server checks roles and reservation ownership.
+</p>
 
                 <a class="video-link"
                    href="artifacts/CS499_Software_Engineering_Artifact.zip"
