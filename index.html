@@ -227,42 +227,77 @@
 </head>
 
 <body>
-  <main class="page">
-    <header>
-      <h1>Computer Science ePortfolio</h1>
-      <p class="name">Hope Badley</p>
-      <p class="intro">
-        I am a Computer Science student with a professional background in investigations and an interest in the investigative side of technology. This ePortfolio documents my growth across the Computer Science program and presents selected work in software design, algorithms, databases, and security.
-      </p>
-    </header>
+    <main class="page">
+        <header>
+            <h1>Computer Science ePortfolio</h1>
+            <p class="name">Hope Badley</p>
+            <p class="intro">
+                I am a Computer Science student with a professional background in investigations and an interest in the investigative side of technology. This ePortfolio documents my growth across the Computer Science program and presents selected work in software design, algorithms, databases, and security.
+            </p>
+        </header>
 
-    <section class="review-card" aria-labelledby="code-review-title">
-      <div class="review-card-inner">
-        <h2 id="code-review-title">Code Review</h2>
-        <p class="description">
-          This code review evaluates Travlr Getaways, a full-stack travel application developed during my Computer Science program. I examine the application's software design, algorithms and data structures, database implementation, and security, then identify opportunities for enhancement.
-        </p>
+        <section class="review-card" aria-labelledby="code-review-title">
+            <div class="review-card-inner">
+                <h2 id="code-review-title">Code Review</h2>
+                <p class="description">
+                    This code review evaluates Travlr Getaways, a full-stack travel application developed during my Computer Science program. I examine the application's software design, algorithms and data structures, database implementation, and security, then identify opportunities for enhancement.
+                </p>
 
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/imT132254aI"
-            title="Travlr Getaways code review by Hope Badley"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
+                <div class="video-frame">
+                    <iframe src="https://www.youtube-nocookie.com/embed/imT132254aI"
+                            title="Travlr Getaways code review by Hope Badley"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                    </iframe>
+                </div>
 
-        <a class="video-link" href="https://youtu.be/imT132254aI" target="_blank" rel="noopener noreferrer">
-          Watch on YouTube <span aria-hidden="true">&#8594;</span>
-        </a>
-      </div>
-    </section>
+                <a class="video-link" href="https://youtu.be/imT132254aI" target="_blank" rel="noopener noreferrer">
+                    Watch on YouTube <span aria-hidden="true">&#8594;</span>
+                </a>
+            </div>
+        </section>
+        </section>
 
-    <footer>
-      <p>CS 499 Computer Science Capstone</p>
-    </footer>
-  </main>
+        <section class="review-card" style="margin-top: 2rem;" aria-labelledby="software-title">
+            <div class="review-card-inner">
+                <h2 id="software-title">Software Design and Engineering</h2>
+
+                <p>
+                    I created Travlr Getaways in CS 465. The original application displayed
+                    trips and allowed authenticated trip management, but it did not separate
+                    customer and administrator permissions or let customers reserve trips.
+                </p>
+
+                <p>
+                    I added customer and administrator roles and a reservation workflow.
+                    Customers can reserve trips, view their own reservations, and cancel them.
+                    Administrators can manage trips and reservation statuses. The work connects
+                    Angular pages, Express routes, authorization middleware, and MongoDB models.
+                    The server checks roles and reservation ownership before allowing access.
+                </p>
+
+                <p>
+                    I tested authentication failures, role restrictions, and reservation
+                    workflows with Postman and in the browser. The Angular application builds,
+                    and all 17 Angular tests pass. This enhancement taught me that hiding an
+                    administrator button is useful for the interface, but permission must also
+                    be enforced by the server.
+                </p>
+
+                <a class="video-link"
+                   href="artifacts/CS499_Software_Engineering_Artifact.zip"
+                   download>
+                    Download original and enhanced code <span aria-hidden="true">&#8594;</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <footer>
+                <p>CS 499 Computer Science Capstone</p>
+            </footer>
+    </main>
 </body>
 </html>
