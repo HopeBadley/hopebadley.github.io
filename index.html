@@ -232,7 +232,7 @@
             <h1>Computer Science ePortfolio</h1>
             <p class="name">Hope Badley</p>
             <p class="intro">
-                I am a Computer Science student with a professional background in investigations and an interest in the investigative side of technology. This ePortfolio documents my growth across the Computer Science program and presents selected work in software design, algorithms, databases, and security.
+                I am a Computer Science student with a background in investigations and an interest in the investigative side of technology. This portfolio presents my work on Travlr Getaways, a full-stack travel application I created in CS 465 and enhanced during CS 499. It highlights my growth in software design, algorithms, databases, and security.
             </p>
         </header>
 
@@ -240,7 +240,7 @@
             <div class="review-card-inner">
                 <h2 id="code-review-title">Code Review</h2>
                 <p class="description">
-                    This code review evaluates Travlr Getaways, a full-stack travel application developed during my Computer Science program. I examine the application's software design, algorithms and data structures, database implementation, and security, then identify opportunities for enhancement.
+                    In this code review, I evaluate the original application’s design, algorithms, database implementation, and security. I explain its limitations and outline my plans for the three enhancements presented in this portfolio.
                 </p>
 
                 <div class="video-frame">
@@ -264,32 +264,21 @@
                 <h2 id="software-title">Software Design and Engineering</h2>
 
                 <p>
-                    I created Travlr Getaways in CS 465. The original application displayed
-                    trips and allowed authenticated trip management, but it did not separate
-                    customer and administrator permissions or let customers reserve trips.
+                    The first enhancement expanded the application’s trip management features by separating customer and administrator permissions and adding a reservation workflow.
                 </p>
 
                 <p>
-                    I added customer and administrator roles and a reservation workflow.
-                    Customers can reserve trips, view their own reservations, and cancel them.
-                    Administrators can manage trips and reservation statuses. The work connects
-                    Angular pages, Express routes, authorization middleware, and MongoDB models.
-                    The server checks roles and reservation ownership before allowing access.
+                    Customers can reserve trips, view their own reservations, and cancel them. Administrators can manage trips and reservation statuses. I connected these workflows through Angular pages, Express routes, authorization middleware, and MongoDB models. The server checks user roles and reservation ownership before allowing access.
                 </p>
 
                 <p>
-                    I tested authentication failures, role restrictions, and reservation
-  workflows with Postman and in the browser. The Angular application builds,
-  and all 17 Angular tests pass.
-                </p>
-
+                    I tested authentication failures, role restrictions, and reservation workflows using Postman and the browser. The Angular application built successfully, and all 17 Angular tests passed at this stage.
+             </p>
+              
               <p>
-  The most useful design lesson was that the interface and API have different
-  responsibilities. Hiding an administrator button keeps the page appropriate
-  for customers, but someone can still send a request directly to the API.
-  That is why the server checks roles and reservation ownership.
-</p>
-
+                This work helped me understand the different responsibilities of the interface and the API. Hiding administrator controls makes the page appropriate for customers, but server-side authorization protects against requests sent directly to the API.
+              </p>    
+              
                 <a class="video-link"
                    href="artifacts/CS499_Software_Engineering_Artifact.zip"
                    download>
@@ -297,6 +286,39 @@
                 </a>
             </div>
         </section>
+
+      <section class="review-card" style="margin-top: 2rem;" aria-labelledby="algorithms-title">
+    <div class="review-card-inner">
+        <h2 id="algorithms-title">Algorithms and Data Structures</h2>
+
+        <p>
+            The second enhancement added personalized trip recommendations to help customers compare available trips.
+        </p>
+
+        <p>
+            The feature considers destination, maximum budget, travel dates, preferred trip length, and the number of results requested. Budget and dates act as required filters. Eligible trips receive weighted scores, and a size-k min-heap retains the strongest matches. The results appear as ranked cards with match percentages and explanations.
+        </p>
+
+        <p>
+            Choosing a min-heap gave me a practical way to evaluate algorithmic tradeoffs. Rather than sorting every eligible trip, the algorithm keeps only the requested number of recommendations. I also converted prices and trip lengths from strings into numeric values so they could be compared consistently.
+        </p>
+
+        <p>
+            Seven backend recommendation tests and nineteen Angular tests passed after this enhancement. Testing covered exact and partial matches, tied scores, invalid input, reversed dates, and empty results. 
+        </p>
+      
+      <p>
+        The main lesson was that recommendation rules require judgment. Separating required conditions from preferences helped me build results that were useful to customers. This enhancement demonstrates algorithm design, full-stack integration, clear communication, and input validation.
+        </p>
+     
+        <a class="video-link"
+           href="artifacts/CS499_Algorithms_and_Data_Structures_Artifact.zip"
+           download>
+            Download original and enhanced code
+            <span aria-hidden="true">&#8594;</span>
+        </a>
+    </div>
+</section>
       
             <footer>
                 <p>CS 499 Computer Science Capstone</p>
