@@ -236,6 +236,215 @@
             </p>
         </header>
 
+      <section class="review-card"
+         style="margin-bottom: 2rem;"
+         aria-labelledby="self-assessment-title">
+    <div class="review-card-inner">
+        <h2 id="self-assessment-title">Professional Self-Assessment</h2>
+
+<p>
+            Completing my Bachelor of Science in Computer Science at
+            Southern New Hampshire University while working full time
+            has strengthened how I approach problems and evaluate information. My background as an Asset Protection
+            Investigator already required careful documentation and attention
+            to detail. My coursework helped me apply those habits to software,
+            algorithms, databases, and security. I am interested in
+            opportunities in fraud analysis and technology-related investigations where I can combine my investigative
+            experience with my technical education.
+        </p>
+
+        <p>
+            Throughout the program, I learned to break unfamiliar problems
+            into smaller parts and learn how each part contributes
+            to the result. Working on my ePortfolio required me to revisit
+            an existing application, identify its limitations, and explain
+            why particular changes were worthwhile. This process helped me
+            recognize my strengths in troubleshooting and evaluating
+            information.
+        </p>
+
+        <h3>Collaboration and Communication</h3>
+
+        <p>
+            In CS 250: Software Development Lifecycle, I served as Scrum
+            Master for a group project. That experience helped me understand
+            how clear responsibilities, shared priorities, and communication
+            about progress support a team. Team members need to understand
+            how their individual work affects the project as a whole.
+            I carried that lesson into my approach to organizing and
+            documenting technical work.
+        </p>
+
+        <p>
+            In CS 255: System Analysis and Design, I developed requirements
+            and system diagrams for DriverPass. Translating business needs
+            into requirements and visual models helped me practice explaining
+            technical ideas to stakeholders. I learned to connect a design
+            decision to the problem it addresses and to choose a level of
+            detail appropriate for the audience.
+        </p>
+
+        <p>
+            My capstone was an individual project, but I used practices
+            that support collaboration. Git branches separated the
+            enhancements, while comments and documentation explained the
+            changes. My code review presented the original application,
+            identified areas for improvement, and outlined my plans.
+            These materials give another developer or evaluator the context
+            needed to review my decisions and understand the project.
+        </p>
+
+        <h3>Data Structures and Algorithms</h3>
+
+        <p>
+            My coursework helped me understand that choosing an algorithm
+            involves evaluating its behavior and the tradeoffs it introduces.
+            In CS 370: Current and Emerging Trends in Computer Science,
+            I worked with deep Q-learning through CartPole and a pirate
+            navigation agent. Adjusting training parameters and examining
+            results showed me why a solution needs to be evaluated against
+            its goals.
+        </p>
+
+        <p>
+            I applied this reasoning to the trip recommendation feature
+            in my capstone. Budget and travel dates act as required filters,
+            while destination and trip length influence weighted scores.
+            A size-<em>k</em> min-heap retains the strongest requested
+            recommendations instead of sorting every eligible trip.
+            Heap selection takes O(<em>n</em> log <em>k</em>) time and uses
+            O(<em>k</em>) additional heap storage, where <em>n</em> is the
+            number of trips evaluated and <em>k</em> is the number of
+            results requested.
+        </p>
+
+        <p>
+            Sorting all eligible trips would have been easier to implement.
+            The heap is useful when customers request a small number of
+            results compared with the number of available trips.
+            Implementing it helped me understand how a data structure
+            should serve the problem being solved. I also learned to
+            distinguish the heap's storage requirements from the memory
+            used elsewhere in the application.
+        </p>
+
+        <h3>Software Engineering and Databases</h3>
+
+        <p>
+            In CS 465: Full Stack Development I, I built Travlr Getaways
+            by connecting an Angular interface, an Express REST API,
+            and a MongoDB database. This project helped me understand
+            how software components work together to support a complete
+            application. Troubleshooting required me to follow requests
+            from the interface through the server and database to identify
+            where a problem occurred. That experience prepared me to
+            expand the application during my capstone, where changes
+            needed to work consistently across every layer.
+        </p>
+
+        <p>
+            The capstone expanded that application through customer and
+            administrator workflows, reservations, recommendations, and
+            database improvements. Adding a reservation feature required
+            coordinated changes to models, routes, controllers, services,
+            forms, and navigation. This strengthened my understanding of
+            software engineering because I had to consider how a change
+            in one layer affected the others.
+        </p>
+
+        <p>
+            The database enhancement helped me think beyond storing and
+            retrieving records. I added validation, a unique trip-code
+            index, an index supporting customer reservation history,
+            and an aggregation report. I also revised the seed script
+            to preserve existing trip IDs. This mattered because
+            reservations reference those IDs. Recreating trips could
+            leave reservations pointing to records that no longer existed.
+        </p>
+
+        <p>
+            These changes taught me to consider existing data when updating
+            a system. A schema change needs to account for both future
+            input and records already stored in the database.
+        </p>
+
+        <h3>Security and Testing</h3>
+
+        <p>
+            In CS 230: Operating Platforms, I worked with authentication
+            and roles in a REST application. That experience provided a
+            foundation for examining access controls in Travlr. During
+            the capstone, I developed a clearer understanding of the
+            difference between authentication and authorization.
+            A valid token identifies a user, but the server still needs
+            to determine whether that user can perform a particular action.
+        </p>
+
+        <p>
+            I added server-side role checks and reservation ownership
+            restrictions. Public registration assigns the customer role,
+            and customers can access only their own reservations.
+            Angular route guards and conditional controls present the
+            appropriate interface, while the API enforces permissions
+            on requests.
+        </p>
+
+        <p>
+            I also considered how invalid input and database operations
+            could affect the application. Recommendation requests are
+            validated, the reservation summary is restricted to
+            administrators, and the report excludes customer identities.
+            The API blocks deletion of trips with reservations to protect
+            related records. These improvements demonstrate my growing
+            security mindset while also showing that application safeguards
+            have limits, especially when someone changes data directly
+            in the database.
+        </p>
+
+        <p>
+            Testing helped me connect design decisions to observable
+            results. The software engineering enhancement passed
+            17 Angular tests. The algorithms enhancement passed seven
+            backend recommendation tests and 19 Angular tests.
+            Database checks covered validation, duplicate trip codes,
+            record references, and deletion conflicts. These results
+            support the completed enhancements and provide a foundation
+            for broader testing in the future.
+        </p>
+
+        <h3>Introduction to My Portfolio</h3>
+
+        <p>
+            My ePortfolio presents Travlr Getaways through three successive
+            enhancements. The Software Design and Engineering enhancement
+            establishes customer and administrator workflows, reservations,
+            and access controls. The Algorithms and Data Structures
+            enhancement adds personalized trip recommendations.
+            The Databases enhancement strengthens validation, reporting,
+            and the integrity of the records supporting these features.
+        </p>
+
+        <p>
+            The code review explains the starting application and planned
+            improvements. Each enhancement includes its original and
+            enhanced code, along with a narrative describing my decisions,
+            learning, and course outcome alignment. Together, these materials
+            demonstrate collaboration practices, professional communication,
+            algorithmic reasoning, practical use of computing tools,
+            and security awareness.
+        </p>
+
+        <p>
+            Completing this portfolio helped me see my progress across
+            the program as connected work. I can evaluate an existing
+            system, identify a problem, implement improvements, and explain
+            the results with supporting evidence. I plan to build on these
+            skills as I pursue work that combines technology, investigation,
+            and careful decision making.
+        </p>
+    </div>
+</section>
+
         <section class="review-card" aria-labelledby="code-review-title">
             <div class="review-card-inner">
                 <h2 id="code-review-title">Code Review</h2>
@@ -279,10 +488,18 @@
                 This work helped me understand the different responsibilities of the interface and the API. Hiding administrator controls makes the page appropriate for customers, but server-side authorization protects against requests sent directly to the API.
               </p>    
               
-                <a class="video-link"
+              <a class="video-link"
                    href="artifacts/CS499_Software_Engineering_Artifact.zip"
                    download>
-                    Download original and enhanced code <span aria-hidden="true">&#8594;</span>
+                    Download original and enhanced code
+                    <span aria-hidden="true">&#8594;</span>
+                </a>
+
+                <a class="video-link"
+                   href="narratives/CS499_Software_Narrative.docx"
+                   download>
+                    Download enhancement narrative
+                    <span aria-hidden="true">&#8594;</span>
                 </a>
             </div>
         </section>
@@ -315,6 +532,74 @@
            href="artifacts/CS499_Algorithms_and_Data_Structures_Artifact.zip"
            download>
             Download original and enhanced code
+            <span aria-hidden="true">&#8594;</span>
+        </a>
+      
+        <a class="video-link"
+           href="narratives/CS499_Algorithms_Narrative.docx"
+           download>
+            Download enhancement narrative
+            <span aria-hidden="true">&#8594;</span>
+          </a>
+      
+    </div>
+</section>
+
+      <section class="review-card"
+         style="margin-top: 2rem;"
+         aria-labelledby="databases-title">
+    <div class="review-card-inner">
+        <h2 id="databases-title">Databases</h2>
+
+        <p>
+            The third enhancement improved the trip and reservation
+            data supporting the application. I added stronger schema
+            validation, purposeful indexes, and an administrator
+            reservation summary.
+        </p>
+
+        <p>
+            Trip codes now have a unique index, and reservations require
+            a whole number of travelers. Trip prices must represent
+            positive amounts with no more than two decimal places.
+            An index on reservation ownership and creation date
+            supports listing a customer's reservations from newest
+            to oldest.
+        </p>
+
+        <p>
+            The administrator-only summary uses a MongoDB aggregation
+            pipeline to group reservations by trip and status, count
+            bookings and travelers, and include each trip's name and
+            code. The report does not return customer identities.
+        </p>
+
+        <p>
+            I also changed the seed script to preserve existing trip
+            records and their IDs. The API checks for reservations
+            before deleting a trip and returns 409 Conflict when
+            reservations exist.
+        </p>
+
+        <p>
+            Testing confirmed that duplicate trip codes were rejected,
+            existing trips passed validation, and the stored
+            reservations had valid user and trip references.
+            These changes taught me to consider existing records
+            and relationships when modifying database rules.
+        </p>
+
+        <a class="video-link"
+           href="artifacts/CS499_Database_Artifact.zip"
+           download>
+            Download original and enhanced code
+            <span aria-hidden="true">&#8594;</span>
+        </a>
+
+        <a class="video-link"
+           href="narratives/CS499_Database_Narrative.docx"
+           download>
+            Download enhancement narrative
             <span aria-hidden="true">&#8594;</span>
         </a>
     </div>
